@@ -26,11 +26,11 @@ jobs:
           SOURCE_FILE=$(ls | grep -i "eu-gov-tracker-blocklist" | head -n 1)
           
           if [ -n "$SOURCE_FILE" ]; then
-            # Konvertierung zu Pi-hole Format (reine Domains)
+            # Konvertierung zu Pi-hole Format
             sed -e 's/||//g' -e 's/\^//g' -e '/^!/d' -e '/^\[/d' -e '/^$/d' "$SOURCE_FILE" > pihole-eu-gov.txt
             echo "✅ Conversion of $SOURCE_FILE successful"
           else
-            echo "❌ Error: Source file 'eu-gov-tracker-blocklist' not found!"
+            echo "❌ Error: Source file not found!"
             exit 1
           fi
           
