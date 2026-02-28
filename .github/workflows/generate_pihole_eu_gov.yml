@@ -4,25 +4,28 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:
+    paths:
+      - 'eu-gov-tracker-blocklist'  
+  workflow_dispatch:              
 
 jobs:
   convert-eu-gov:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: write             
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
       - name: Convert Blocklist to Pi-hole
         run: |
-          # Suche nach der Datei 'eu-gov-tracker-blocklist'
+          # Prüfen, ob die Quelldatei existiert
           if [ -f "eu-gov-tracker-blocklist" ]; then
+            # Umwandlung: Entfernt AdGuard-Syntax, behält nur Domains
             sed -e 's/||//g' -e 's/\^//g' -e '/^!/d' -e '/^\[/d' -e '/^$/d' "eu-gov-tracker-blocklist" > pihole-eu-gov.txt
-            echo "✅ Conversion successful"
+            echo "✅ Konvertierung erfolgreich"
           else
-            echo "❌ Error: File 'eu-gov-tracker-blocklist' not found!"
+            echo "❌ FEHLER: Datei 'eu-gov-tracker-blocklist' nicht gefunden!"
             ls -R
             exit 1
           fi
@@ -32,5 +35,5 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add pihole-eu-gov.txt
-          git commit -m "Update Pi-hole list [auto]" || echo "No changes to commit"
+          git commit -m "Update Pi-hole EU-Gov list [auto]" || echo "Keine Änderungen zum Committen"
           git push
