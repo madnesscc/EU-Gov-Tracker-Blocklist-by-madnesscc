@@ -17,13 +17,13 @@ jobs:
 
       - name: Convert Blocklist to Pi-hole
         run: |
-          # Wir suchen die Datei 'eu-gov-tracker-blocklist' im Hauptverzeichnis
+          # Suche nach der Datei 'eu-gov-tracker-blocklist'
           if [ -f "eu-gov-tracker-blocklist" ]; then
             sed -e 's/||//g' -e 's/\^//g' -e '/^!/d' -e '/^\[/d' -e '/^$/d' "eu-gov-tracker-blocklist" > pihole-eu-gov.txt
             echo "✅ Conversion successful"
           else
             echo "❌ Error: File 'eu-gov-tracker-blocklist' not found!"
-            ls -R # Zeigt uns im Log, welche Dateien wirklich da sind
+            ls -R
             exit 1
           fi
           
@@ -32,5 +32,5 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add pihole-eu-gov.txt
-          git commit -m "Update Pi-hole list [auto]" || echo "No changes"
+          git commit -m "Update Pi-hole list [auto]" || echo "No changes to commit"
           git push
