@@ -1,14 +1,12 @@
 name: generate_pihole_eu_gov
 
-name: generate_pihole_eu_gov
-
 on:
   push:
     branches:
       - main
     paths:
-      - 'EU-Gov-Tracker-Blocklist-by-madnesscc' 
-  workflow_dispatch:                           
+      - 'EU-Gov-Tracker-Blocklist-by-madnesscc'
+  workflow_dispatch:
 
 jobs:
   convert-eu-gov:
@@ -21,8 +19,7 @@ jobs:
 
       - name: Convert Blocklist to Pi-hole
         run: |
-          # Wir suchen jetzt einfach nach der Datei, die 'blocklist' im Namen hat
-          # (außer der README und der Workflow-Datei selbst)
+          # Sucht die Datei unabhängig von Groß-/Kleinschreibung
           SOURCE_FILE=$(ls | grep -i "blocklist" | grep -v ".md" | head -n 1)
           
           if [ -n "$SOURCE_FILE" ]; then
@@ -31,7 +28,6 @@ jobs:
             echo "✅ Conversion successful"
           else
             echo "❌ Error: No file with 'blocklist' in name found!"
-            ls -la
             exit 1
           fi
           
