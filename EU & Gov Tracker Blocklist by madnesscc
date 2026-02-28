@@ -1,0 +1,66 @@
+! Title: EU & Gov Tracker Blocklist by madnesscc
+! Description: Blocks analytics and telemetry on governmental and EU websites.
+! Version: 1.2.0
+! Author: madnesscc
+! License: MIT
+! Last modified: 2026-02-28
+! --------------------------------------------------
+
+! --- [CATEGORY: EU & INTERNATIONAL GOV] ---
+||europa.eu/webtools/rest/collector^
+||ec.europa.eu/analytics^
+||europa.eu/webtools/social-bookmarking^
+
+! --- [CATEGORY: GERMANY (.DE / .BUND.DE)] ---
+||statistik.bund.de^
+||piwik.diplo.de^
+||analytics.bundeswehr.de^
+||etracker.com^$domain=bund.de|bundesregierung.de|polizei.de
+||matomo.bva.bund.de^
+
+! --- [CATEGORY: POLAND (.GOV.PL)] ---
+||stat.gov.pl/piwik^
+||analytics.gov.pl^
+||mobywatel.gov.pl/analytics^
+
+! --- [CATEGORY: AUSTRIA (.GV.AT)] ---
+||statistik.at/piwik^
+||analytics.gv.at^
+||digitales.oesterreich.gv.at/piwik^
+
+! --- [CATEGORY: NETHERLANDS (.NL / .OVERHEID.NL)] ---
+||statistiek.rijksoverheid.nl^
+||log.overheid.nl^
+||piwik.overheid.nl^
+
+! --- [CATEGORY: DENMARK (.DK / .BORGER.DK)] ---
+||statistiek.borger.dk^
+||analytics.skat.dk^
+||digst.dk/piwik^
+
+! --- [CATEGORY: SWEDEN (.SE / .REGERINGEN.SE)] ---
+||statistik.regeringen.se^
+||analytics.skatteverket.se^
+||piwik.forsakringskassan.se^
+
+! --- [CATEGORY: ITALY (.GOV.IT)] ---
+||monitoraggio.governo.it^
+||statistiche.interno.gov.it^
+||analytics.istat.it^
+
+! --- [CATEGORY: GREECE (.GOV.GR)] ---
+||analytics.gov.gr^
+||statistics.gr/piwik^
+
+! --- [CATEGORY: TURKEY (.GOV.TR)] ---
+||analitik.gov.tr^
+||istatistik.gov.tr^
+||e-devlet.gov.tr/analitik^
+
+! --- [CATEGORY: PRIVACY HARDENING - THIRD PARTY] ---
+! Blocks Google Analytics & Tag Manager on specific gov TLDs
+||google-analytics.com^$domain=gov|eu|bund.de|gv.at|gov.pl|gov.it|gov.gr|gov.tr|overheid.nl
+||googletagmanager.com^$domain=gov|eu|bund.de|gv.at|gov.pl|gov.it|gov.gr|gov.tr|overheid.nl
+
+! Blocks Cookie-Consent-Trackers on Gov sites (Cookiebot etc.)
+||cookiebot.com^$domain=gov|eu|gv.at|gov.pl|gov.it|gov.tr
