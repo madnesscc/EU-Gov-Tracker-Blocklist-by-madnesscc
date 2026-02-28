@@ -4,7 +4,7 @@
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-[![Pi-hole Generation](https://github.com/madnesscc/adguard-whitelist-cloudgaming/actions/workflows/generate_pihole_eu_gov.yml/badge.svg)](https://github.com/madnesscc/adguard-whitelist-cloudgaming/actions)
+![Pi-hole Generation](https://github.com/madnesscc/EU-Gov-Tracker-Blocklist-by-madnesscc/actions/workflows/generate_pihole_eu_gov.yml/badge.svg)
 
 A specialized blocklist maintained by **madnesscc** to enhance privacy on governmental and European Union websites.
 
