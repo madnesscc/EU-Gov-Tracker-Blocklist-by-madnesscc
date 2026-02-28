@@ -4,7 +4,22 @@
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
+[![Pi-hole Generation](https://github.com/madnesscc/adguard-whitelist-cloudgaming/actions/workflows/generate_pihole_eu_gov.yml/badge.svg)](https://github.com/madnesscc/adguard-whitelist-cloudgaming/actions)
+
 A specialized blocklist maintained by **madnesscc** to enhance privacy on governmental and European Union websites.
+
+## 🇪🇺 EU & Gov Tracker Blocklist
+
+This list blocks tracking by European and government-related entities.
+
+### 📥 Download & Installation
+
+| Platform | Filter Type | Link |
+| :--- | :--- | :--- |
+| **AdGuard / uBlock** | Blocklist | [eu-gov-tracker-blocklist](./eu-gov-tracker-blocklist) |
+| **Pi-hole / DNS** | Clean Domains | [pihole-eu-gov.txt](./pihole-eu-gov.txt) |
+
+> **Status:** Automatically generated and updated.
 
 ## 🛡️ What does this list do?
 Most general adblock lists focus on commercial ads. This list targets:
