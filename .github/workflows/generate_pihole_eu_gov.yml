@@ -1,11 +1,14 @@
 name: generate_pihole_eu_gov
 
+name: generate_pihole_eu_gov
+
 on:
   push:
     branches:
       - main
     paths:
-      - 'EU-Gov-Tracker-Blocklist-by-madnesscc'
+      - 'EU-Gov-Tracker-Blocklist-by-madnesscc' 
+  workflow_dispatch:                           
 
 jobs:
   convert-eu-gov:
