@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - 'eu-gov-tracker-blocklist'
   workflow_dispatch:
 
 jobs:
@@ -17,20 +15,19 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Debug - List Files
-        run: ls -la
-
       - name: Convert Blocklist to Pi-hole
         run: |
-          # Sucht die Datei unabhängig von Groß-/Kleinschreibung
-          SOURCE_FILE=$(ls | grep -i "eu-gov-tracker-blocklist" | head -n 1)
+          # Wir suchen jetzt einfach nach der Datei, die 'blocklist' im Namen hat
+          # (außer der README und der Workflow-Datei selbst)
+          SOURCE_FILE=$(ls | grep -i "blocklist" | grep -v ".md" | head -n 1)
           
           if [ -n "$SOURCE_FILE" ]; then
-            # Konvertierung zu Pi-hole Format
+            echo "Found source file: $SOURCE_FILE"
             sed -e 's/||//g' -e 's/\^//g' -e '/^!/d' -e '/^\[/d' -e '/^$/d' "$SOURCE_FILE" > pihole-eu-gov.txt
-            echo "✅ Conversion of $SOURCE_FILE successful"
+            echo "✅ Conversion successful"
           else
-            echo "❌ Error: Source file not found!"
+            echo "❌ Error: No file with 'blocklist' in name found!"
+            ls -la
             exit 1
           fi
           
@@ -39,5 +36,5 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add pihole-eu-gov.txt
-          git commit -m "Update Pi-hole EU-Gov list [auto]" || echo "No changes to commit"
+          git commit -m "Update Pi-hole list [auto]" || echo "No changes to commit"
           git push
