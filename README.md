@@ -87,3 +87,8 @@ Blocking scripts on government websites can sometimes break interactive forms (e
 
 ---
 **Disclaimer:** This project is independent and not affiliated with any government agency. Maintained by **madnesscc**.
+---
+
+## 📄 License
+
+MIT © madnesscc
