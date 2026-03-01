@@ -59,7 +59,7 @@ A specialized blocklist maintained by **madnesscc** to enhance privacy on govern
 | TrustArc | Cookie Consent |
 | Didomi | Cookie Consent |
 
-## 🇪🇺 EU & Gov Tracker Blocklist
+## EU & Gov Tracker Blocklist
 
 This list blocks tracking by European and government-related entities.
 
