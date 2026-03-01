@@ -1,6 +1,6 @@
 ! Title: EU & Gov Tracker Blocklist by madnesscc
 ! Description: Blocks analytics and telemetry on governmental and EU websites.
-! Version: 1.3.0
+! Version: 1.5.0
 ! Author: madnesscc
 ! License: MIT
 ! Last modified: 2026-03-01
@@ -24,21 +24,6 @@
 ||matomo.bundesministerium.de^
 ||analytics.destatis.de^
 
-! --- [CATEGORY: FRANCE (.GOUV.FR)] ---
-||stats.gouv.fr^
-||analytics.service-public.fr^
-||piwik.gouv.fr^
-||matomo.gouv.fr^
-||stats.data.gouv.fr^
-||pixel.gouv.fr^
-
-! --- [CATEGORY: SPAIN (.GOB.ES)] ---
-||analytics.gob.es^
-||estadistica.gob.es/piwik^
-||piwik.administracion.gob.es^
-||analytics.sede.gob.es^
-||matomo.mpr.gob.es^
-
 ! --- [CATEGORY: POLAND (.GOV.PL)] ---
 ||stat.gov.pl/piwik^
 ||analytics.gov.pl^
@@ -59,13 +44,6 @@
 ||analytics.belastingdienst.nl^
 ||matomo.overheid.nl^
 
-! --- [CATEGORY: BELGIUM (.BE / .FGOV.BE)] ---
-||analytics.belgium.be^
-||piwik.fgov.be^
-||matomo.fgov.be^
-||stats.belgium.be^
-||analytics.ibz.be^
-
 ! --- [CATEGORY: DENMARK (.DK / .BORGER.DK)] ---
 ||statistiek.borger.dk^
 ||analytics.skat.dk^
@@ -80,25 +58,6 @@
 ||matomo.migrationsverket.se^
 ||analytics.polisen.se^
 
-! --- [CATEGORY: FINLAND (.FI / .SUOMI.FI)] ---
-||analytics.suomi.fi^
-||piwik.vero.fi^
-||analytics.kela.fi^
-||matomo.poliisi.fi^
-||stats.hel.fi^
-
-! --- [CATEGORY: PORTUGAL (.GOV.PT)] ---
-||analytics.gov.pt^
-||piwik.ine.pt^
-||matomo.sns.gov.pt^
-||stats.portaldasfinancas.gov.pt^
-
-! --- [CATEGORY: CZECH REPUBLIC (.GOV.CZ)] ---
-||analytics.gov.cz^
-||piwik.czso.cz^
-||matomo.mvcr.cz^
-||stats.portal.gov.cz^
-
 ! --- [CATEGORY: ITALY (.GOV.IT)] ---
 ||monitoraggio.governo.it^
 ||statistiche.interno.gov.it^
@@ -111,64 +70,211 @@
 ||statistics.gr/piwik^
 ||matomo.gsis.gr^
 
-! --- [CATEGORY: ROMANIA (.GOV.RO)] ---
-||analytics.gov.ro^
-||piwik.insse.ro^
-||stats.anaf.ro^
-||matomo.gov.ro^
-
-! --- [CATEGORY: HUNGARY (.GOV.HU)] ---
-||analytics.gov.hu^
-||piwik.ksh.hu^
-||matomo.magyarorszag.hu^
-
 ! --- [CATEGORY: TURKEY (.GOV.TR)] ---
 ||analitik.gov.tr^
 ||istatistik.gov.tr^
 ||e-devlet.gov.tr/analitik^
 ||matomo.turkiye.gov.tr^
 
+! --- [CATEGORY: USA (.GOV / .MIL)] ---
+||dap.digitalgov.gov^
+||analytics.usa.gov^
+||metrics.usa.gov^
+||webanalytics.digital.gov^
+||stats.irs.gov^
+||analytics.census.gov^
+||analytics.ed.gov^
+||analytics.hhs.gov^
+||dag.digitalgov.gov^
+||tracking.usps.com^
+||analytics.ssa.gov^
+||telemetry.fbi.gov^
+
+! --- [CATEGORY: CANADA (.GC.CA / .CANADA.CA)] ---
+||analytics.canada.ca^
+||piwik.canada.ca^
+||matomo.canada.ca^
+||stats.canada.ca^
+||analytics.cra-arc.gc.ca^
+||tracking.gc.ca^
+||stats.statcan.gc.ca^
+||analytics.servicecanada.gc.ca^
+||telemetry.canada.ca^
+
+! --- [CATEGORY: UNITED KINGDOM (.GOV.UK)] ---
+||analytics.publishing.service.gov.uk^
+||matomo.publishing.service.gov.uk^
+||ga.publishing.service.gov.uk^
+||analytics.hmrc.gov.uk^
+||tracking.dwp.gov.uk^
+||stats.nhs.uk^
+||analytics.mod.gov.uk^
+||performance.service.gov.uk^
+||logit.io^$domain=gov.uk
+
+! --- [CATEGORY: NEW ZEALAND (.GOVT.NZ)] ---
+||analytics.govt.nz^
+||piwik.govt.nz^
+||matomo.govt.nz^
+||stats.govt.nz/piwik^
+||tracking.ird.govt.nz^
+||analytics.dia.govt.nz^
+||webstats.govt.nz^
+
+! --- [CATEGORY: AUSTRALIA (.GOV.AU)] ---
+||analytics.australia.gov.au^
+||piwik.australia.gov.au^
+||matomo.australia.gov.au^
+||stats.ato.gov.au^
+||analytics.servicesaustralia.gov.au^
+||tracking.homeaffairs.gov.au^
+||analytics.abs.gov.au^
+||webstats.gov.au^
+||analytics.defence.gov.au^
+
 ! --- [CATEGORY: IRELAND (.GOV.IE)] ---
 ||analytics.gov.ie^
 ||stats.revenue.ie^
 ||piwik.welfare.ie^
 ||matomo.hse.ie^
+||tracking.gov.ie^
 
-! --- [CATEGORY: LUXEMBOURG (.GOUVERNEMENT.LU)] ---
-||analytics.gouvernement.lu^
-||piwik.gouvernement.lu^
-||stats.guichet.lu^
+! --- [CATEGORY: SWITZERLAND (.ADMIN.CH)] ---
+||analytics.admin.ch^
+||piwik.admin.ch^
+||matomo.admin.ch^
+||stats.admin.ch^
+||tracking.estv.admin.ch^
+||analytics.fedpol.admin.ch^
+
+! --- [CATEGORY: NORWAY (.NO / .NORGE.NO)] ---
+||analytics.norge.no^
+||piwik.skatteetaten.no^
+||matomo.nav.no^
+||stats.regjeringen.no^
+||analytics.politiet.no^
+
+! --- [CATEGORY: SOUTH AFRICA (.GOV.ZA)] ---
+||analytics.gov.za^
+||piwik.sars.gov.za^
+||matomo.gov.za^
+||stats.statssa.gov.za^
+
+! --- [CATEGORY: INDIA (.GOV.IN / .NIC.IN)] ---
+||analytics.gov.in^
+||piwik.nic.in^
+||matomo.india.gov.in^
+||stats.incometax.gov.in^
+||tracking.mygov.in^
+||analytics.uidai.gov.in^
+
+! --- [CATEGORY: JAPAN (.GO.JP)] ---
+||analytics.e-gov.go.jp^
+||piwik.go.jp^
+||matomo.digital.go.jp^
+||stats.stat.go.jp^
+||tracking.nta.go.jp^
+||analytics.mhlw.go.jp^
+||telemetry.cao.go.jp^
+||analytics.digital.go.jp^
+
+! --- [CATEGORY: SOUTH KOREA (.GO.KR)] ---
+||analytics.korea.go.kr^
+||piwik.go.kr^
+||matomo.go.kr^
+||stats.kostat.go.kr^
+||tracking.nts.go.kr^
+||analytics.mois.go.kr^
+||webstats.go.kr^
+
+! --- [CATEGORY: BRAZIL (.GOV.BR)] ---
+||analytics.gov.br^
+||piwik.gov.br^
+||matomo.gov.br^
+||stats.ibge.gov.br^
+||tracking.receita.fazenda.gov.br^
+||analytics.caixa.gov.br^
+||webstats.gov.br^
+||analytics.serpro.gov.br^
+
+! --- [CATEGORY: MEXICO (.GOB.MX)] ---
+||analytics.gob.mx^
+||piwik.gob.mx^
+||matomo.gob.mx^
+||stats.inegi.org.mx^
+||tracking.sat.gob.mx^
+||analytics.imss.gob.mx^
+
+! --- [CATEGORY: ARGENTINA (.GOB.AR)] ---
+||analytics.gob.ar^
+||piwik.gob.ar^
+||matomo.gob.ar^
+||stats.indec.gob.ar^
+||tracking.afip.gob.ar^
+
+! --- [CATEGORY: SINGAPORE (.GOV.SG)] ---
+||analytics.gov.sg^
+||piwik.gov.sg^
+||matomo.gov.sg^
+||stats.singstat.gov.sg^
+||tracking.iras.gov.sg^
+||analytics.cpf.gov.sg^
+||webstats.gov.sg^
+
+! --- [CATEGORY: UNITED ARAB EMIRATES (.GOV.AE)] ---
+||analytics.government.ae^
+||piwik.gov.ae^
+||matomo.gov.ae^
+||stats.fcsa.gov.ae^
+||tracking.tax.gov.ae^
+||analytics.mohap.gov.ae^
+
+! --- [CATEGORY: RUSSIA (.GOV.RU)] ---
+||analytics.gosuslugi.ru^
+||piwik.gov.ru^
+||matomo.nalog.gov.ru^
+||stats.rosstat.gov.ru^
+||tracking.mos.ru^
+||analytics.pfr.gov.ru^
+
+! --- [CATEGORY: CHINA (.GOV.CN)] ---
+||analytics.gov.cn^
+||stats.stats.gov.cn^
+||tracking.mof.gov.cn^
+||piwik.miit.gov.cn^
+||webstats.gov.cn^
 
 ! --- [CATEGORY: PRIVACY HARDENING - THIRD PARTY] ---
 ! Google Analytics & Tag Manager
-||google-analytics.com^$domain=gov|eu|bund.de|gv.at|gov.pl|gov.it|gov.gr|gov.tr|overheid.nl|gouv.fr|gob.es|fgov.be|gov.ie|gouvernement.lu|gov.pt|gov.cz|gov.ro|gov.hu
-||googletagmanager.com^$domain=gov|eu|bund.de|gv.at|gov.pl|gov.it|gov.gr|gov.tr|overheid.nl|gouv.fr|gob.es|fgov.be|gov.ie|gouvernement.lu|gov.pt|gov.cz|gov.ro|gov.hu
-||google-analytics.com^$domain=borger.dk|regeringen.se|suomi.fi|magyarorszag.hu
+||google-analytics.com^$domain=gov|eu|mil|bund.de|gv.at|gov.pl|gov.it|gov.gr|gov.tr|overheid.nl|borger.dk|regeringen.se|gov.uk|govt.nz|gov.au|gc.ca|canada.ca|gov.ie|admin.ch|norge.no|gov.za|gov.in|nic.in|go.jp|go.kr|gov.br|gob.mx|gob.ar|gov.sg|gov.ae|gov.ru|gov.cn
+||googletagmanager.com^$domain=gov|eu|mil|bund.de|gv.at|gov.pl|gov.it|gov.gr|gov.tr|overheid.nl|borger.dk|regeringen.se|gov.uk|govt.nz|gov.au|gc.ca|canada.ca|gov.ie|admin.ch|norge.no|gov.za|gov.in|nic.in|go.jp|go.kr|gov.br|gob.mx|gob.ar|gov.sg|gov.ae|gov.ru|gov.cn
 
 ! Microsoft Clarity & Application Insights
-||clarity.ms^$domain=gov|eu|bund.de|gv.at|gouv.fr|gob.es|overheid.nl|gov.pl|gov.it
-||dc.services.visualstudio.com^$domain=gov|eu|bund.de|gouv.fr|gob.es
-||browser.events.data.microsoft.com^$domain=gov|eu|bund.de|gouv.fr
+||clarity.ms^$domain=gov|eu|mil|bund.de|gv.at|gov.pl|gov.it|gov.gr|gov.tr|overheid.nl|gov.uk|govt.nz|gov.au|gc.ca|admin.ch|go.jp|go.kr|gov.br|gov.sg
+||dc.services.visualstudio.com^$domain=gov|eu|mil|bund.de|gov.pl|gov.it|gov.uk|gc.ca|govt.nz|gov.au|go.jp|go.kr|gov.br
+||browser.events.data.microsoft.com^$domain=gov|eu|mil|bund.de|gov.uk|gc.ca|gov.au|go.jp|gov.sg
 
 ! Adobe Analytics
-||omtrdc.net^$domain=gov|eu|bund.de|gv.at|gouv.fr|gob.es|gov.it
-||2o7.net^$domain=gov|eu|bund.de|gouv.fr|gob.es
+||omtrdc.net^$domain=gov|eu|mil|bund.de|gv.at|gov.pl|gov.it|gov.gr|gov.uk|gc.ca|govt.nz|gov.au|go.jp|go.kr|gov.sg
+||2o7.net^$domain=gov|eu|mil|bund.de|gov.pl|gov.it|gov.uk|gc.ca|gov.au|go.jp|gov.sg
 
 ! Hotjar
-||static.hotjar.com^$domain=gov|eu|bund.de|gv.at|gouv.fr|gob.es|gov.pl|gov.it
-||insights.hotjar.com^$domain=gov|eu|bund.de|gv.at|gouv.fr|gob.es
+||static.hotjar.com^$domain=gov|eu|mil|bund.de|gv.at|gov.pl|gov.it|gov.gr|gov.tr|overheid.nl|gov.uk|govt.nz|gov.au|gc.ca|go.jp|go.kr|gov.br|gob.mx|gov.sg
+||insights.hotjar.com^$domain=gov|eu|mil|bund.de|gv.at|gov.pl|gov.it|gov.gr|gov.tr|overheid.nl|gov.uk|govt.nz|gov.au|gc.ca|go.jp|go.kr|gov.br|gob.mx|gov.sg
 
-! Sentry (Error Tracking)
-||sentry.io^$domain=gov|eu|bund.de|gv.at|gouv.fr|gob.es|gov.pl|gov.it|gov.ie
+! Sentry
+||sentry.io^$domain=gov|eu|mil|bund.de|gv.at|gov.pl|gov.it|gov.gr|gov.tr|overheid.nl|gov.uk|govt.nz|gov.au|gc.ca|admin.ch|go.jp|go.kr|gov.br|gov.sg
 
-! Yandex Metrica (relevant für osteuropäische Gov-Sites)
-||mc.yandex.ru^$domain=gov|eu|gov.pl|gov.ro|gov.hu|gov.cz|magyarorszag.hu
+! Yandex Metrica (relevant außerhalb RU)
+||mc.yandex.ru^$domain=gov|eu|gov.pl|gov.gr|gov.tr|gov.in|gov.ae
+
+! DAP – US Government Analytics Platform
+||dap.digitalgov.gov^
 
 ! --- [CATEGORY: COOKIE CONSENT TRACKERS] ---
-! Cookiebot / Usercentrics / OneTrust / Didomi / TrustArc
-||cookiebot.com^$domain=gov|eu|gv.at|gov.pl|gov.it|gov.tr|gouv.fr|gob.es|fgov.be|gov.ie
-||usercentrics.eu^$domain=gov|eu|bund.de|gv.at|gouv.fr|gob.es|gov.pl
-||cdn.cookielaw.org^$domain=gov|eu|bund.de|gv.at|gouv.fr|gob.es|gov.pl|gov.it
-||consent.trustarc.com^$domain=gov|eu|bund.de|gouv.fr|gob.es|gov.ie
-||api.didomi.io^$domain=gov|eu|gouv.fr|gouvernement.lu|gov.it
-||geolocation.onetrust.com^$domain=gov|eu|bund.de|gouv.fr|gob.es|gov.ie
+||cookiebot.com^$domain=gov|eu|gv.at|gov.pl|gov.it|gov.gr|gov.tr|bund.de|gov.uk|govt.nz|gov.au|gc.ca|gov.ie|admin.ch|go.jp|go.kr|gov.br|gov.sg
+||usercentrics.eu^$domain=gov|eu|bund.de|gv.at|gov.pl|gov.it|gov.gr|gov.uk|admin.ch|go.jp|gov.sg
+||cdn.cookielaw.org^$domain=gov|eu|mil|bund.de|gv.at|gov.pl|gov.it|gov.gr|gov.tr|overheid.nl|gov.uk|govt.nz|gov.au|gc.ca|go.jp|go.kr|gov.br|gov.sg
+||consent.trustarc.com^$domain=gov|eu|mil|bund.de|gov.pl|gov.it|gov.uk|gc.ca|gov.au|govt.nz|go.jp|gov.sg
+||api.didomi.io^$domain=gov|eu|gov.it|gov.gr|gov.uk|gov.ie|gov.br
+||geolocation.onetrust.com^$domain=gov|eu|mil|bund.de|gv.at|gov.pl|gov.it|gov.gr|gov.tr|overheid.nl|gov.uk|govt.nz|gov.au|gc.ca|go.jp|go.kr|gov.br|gob.mx|gov.sg|gov.ae
